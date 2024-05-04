@@ -1,0 +1,34 @@
+<h1>{{h1}}</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="#!/trang-add" class="btn btn-outline-danger">Add</a>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Ten loa</th>
+                        <th>Gia loa</th>
+                        <th>Dia chi</th>
+                        <th>Hanh dong</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="l in loa">
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td>{{l.tenLoa}}</td>
+                        <td>{{l.giaLoa}}</td>
+                        <td ng-if="l.diaChi == 1">HN</td>
+                        <td ng-if="l.diaChi == 2">HCM</td>
+                        <td ng-if="l.diaChi == 3">HP</td>
+                        <td>
+                            <a href="#!/trang-update/{{l.id}}" class="btn btn-outline-success">Update</a>
+                            <button ng-click="deleteLoa(l.id)"
+                                class="btn btn-outline-warning">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

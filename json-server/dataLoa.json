@@ -1,0 +1,34 @@
+{
+  "loa": [
+    {
+      "tenLoa": "bluttu",
+      "giaLoa": "12000",
+      "diaChi": "1",
+      "id": "12ddg"
+    },
+    {
+      "tenLoa": "bluttu",
+      "giaLoa": "12000",
+      "diaChi": "2",
+      "id": "56ddg"
+    },
+    {
+      "tenLoa": "mini",
+      "giaLoa": "12000",
+      "diaChi": "3",
+      "id": "78kjdg"
+    },
+    {
+      "id": "eef2",
+      "tenLoa": "loa damcuoi",
+      "giaLoa": "12334",
+      "diaChi": "1"
+    },
+    {
+      "tenLoa": "loa damcuoi",
+      "giaLoa": "1",
+      "diaChi": "2",
+      "id": "8c26"
+    }
+  ]
+}

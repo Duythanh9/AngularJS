@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="boostrap/boostrap.min.css">
+        <script src="libs/angular.min.js"></script>
+        <script src="libs/angular-route.min.js"></script>
+    </head>
+    <body ng-app="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-sm navbar-dark bg-warning">
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href
+                                        class="nav-link active">Home</a></li>
+                                <li class="nav-item"><a href
+                                        class="nav-link">Trang add</a></li>
+                                <li class="nav-item"><a href
+                                        class="nav-link disabled">Trang
+                                        delete</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div ng-view>
+
+            </div>
+        </div>
+    </body>
+    <script src="controller/indexController.js"></script>
+    <script src="controller/addController.js"></script>
+    <script src="controller/updateController.js"></script>
+    <script>
+        let data = angular.module("app",["ngRoute"]);
+            data.config(function($routeProvider){
+                $routeProvider
+                .when("/trang-chu",
+                {
+                    templateUrl:"views/index.html",
+                    controller:indexController
+                })
+                .when("/trang-add",
+                {
+                    templateUrl:"views/add.html",
+                    controller:addController
+                })
+                .when("/trang-update/:id",
+                {
+                    templateUrl:"views/update.html",
+                    controller:updateController
+                })
+                .otherwise({
+                    redirectTo:"/trang-chu"
+                })
+            })
+    </script>
+</html>
